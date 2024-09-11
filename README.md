@@ -43,3 +43,6 @@ No installation is required. Simply clone this repository or download the script
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Data Folder HbYX_data_tables
+This folder contains data results files for the ProEnd Scripts project.
