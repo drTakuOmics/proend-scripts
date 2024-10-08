@@ -16,6 +16,9 @@ Ensure you have the necessary FASTA file in the same directory or specify the pa
 `#!bash
 ./HbYX-First.bash`
 
+or 
+
+`bash HbYX-First.bash `
 This will output a file named `multifasta.ol.fa`, containing all the sequences from the original FASTA file, formatted for further processing.
 
 ### 2. HbYX-Second-Script.bash
@@ -29,6 +32,9 @@ Run the script using:
 `#!bash
 ./HbYX-Second-Script.bash`
 
+or 
+
+`bash HbYX-Second-Script.bash`
 It will produce a file named `2aa.txt`, containing the motifs found along with the corresponding header from the FASTA file, if available.
 
 ## Requirements
@@ -42,7 +48,13 @@ No installation is required. Simply clone this repository or download the script
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please feel free to submit a Push Request.
 
 ## Data Folder HbYX_data_tables
 This folder contains data results files for the ProEnd Scripts project.
+
+## Cite 
+This code can be cited currently as BioRxiv preprint:
+
+Salcedo-Tacuma, D. M., Howells, G., McHose, C., Gutierrez-Diaz, A., & Smith, D. M. (2024). ProEnd: A Comprehensive Database for Identifying HbYX Motif-Containing Proteins Across the Tree of Life. bioRxiv, 2024-06. doi: https://doi.org/10.1101/2024.06.08.598080
+
