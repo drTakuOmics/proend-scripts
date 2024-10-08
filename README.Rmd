@@ -1,0 +1,102 @@
+---
+title: "ProEnd Pipeline"
+author: "David & Aimer"
+output: github_document
+bibliography: References.bib
+link-citations: true
+csl: https://raw.githubusercontent.com/citation-style-language/styles/master/biomed-central.csl
+---
+
+# ProEnd Scripts
+
+This project contains two Bash scripts designed to handle and analyze multiple protein sequences. The scripts streamline the extraction and identification of specific C-terminal protein HbYX-motifs from a given FASTA file. The third script shows how to download the proteomes from UniProt.
+
+If you have just one protein sequence or your file is already one protein sequence per line go to script 2
+## Scripts
+
+### 1. HbYX-First.bash
+
+This script formats a multi-entry FASTA file into a single line per entry format, preparing it for further analysis. Use this script first if you have multiple sequences, a proteome, or alignments.
+
+#### Usage
+
+Ensure you have the necessary FASTA file in the same directory or specify the path to the file. Execute the script by running:
+
+`#!bash
+./HbYX-First.bash`
+
+or 
+
+`bash HbYX-First.bash `
+This will output a file named `multifasta.ol.fa`, containing all the sequences from the original FASTA file, formatted for further processing.
+
+### 2. HbYX-Second-Script.bash
+
+This script searches for a specific HbYX-motif at the C-terminus of the protein sequences in the `multifasta.ol.fa` file created by the first script.
+
+#### Usage
+
+Run the script using:
+
+`#!bash
+./HbYX-Second-Script.bash`
+
+or 
+
+`bash HbYX-Second-Script.bash`
+It will produce a file named `2aa.txt`, containing the motifs found along with the corresponding header from the FASTA file, if available.
+
+### Testing ProEND with *Arabidopsis proteome*
+
+Download (Reviewed Swiss-Pro) Arabidopsis [proteome from Uniprot](https://www.uniprot.org/uniprotkb?query=arabidopsis&facets=reviewed%3Atrue)
+
+1. Fasta linearization 
+
+```{bash, eval=TRUE}
+zcat Arabidopsis_uniprot_proteome/uniprotkb_arabidopsis_AND_reviewed_true_2024_10_08.fasta.gz | head -n 2
+```
+
+```{bash, eval=TRUE}
+bash HbYX-First.awk Arabidopsis_uniprot_proteome/uniprotkb_arabidopsis_AND_reviewed_true_2024_10_08.fasta.gz Arabidopsis_uniprot_proteome/arabidopsis_uniprot_proteome.ol.fa
+head -n 2 Arabidopsis_uniprot_proteome/arabidopsis_uniprot_proteome.ol.fa
+```
+
+2. HbYX motif prediction 
+```{bash, eval=TRUE}
+bash HbYX-Second-Script.awk  Arabidopsis_uniprot_proteome/arabidopsis_uniprot_proteome.ol.fa  Arabidopsis_uniprot_proteome/arabidopsis_HbyX_proteome.txt
+```
+
+Total number of HbYX motif candidates: 
+```{bash, eval=TRUE}
+wc -l Arabidopsis_uniprot_proteome/arabidopsis_HbyX_proteome.txt 
+```
+
+3. Testing CDC48A as HbYX proteasome regulatory protein
+
+<!-- CDC48A (At3g09840) from Arabidopsis -->
+```{bash, eval=TRUE}
+grep -i cdc48 -A 1 --no-group-separator Arabidopsis_uniprot_proteome/arabidopsis_HbyX_proteome.txt 
+```
+
+
+## Requirements
+
+- Unix-like environment
+- AWK installed
+
+## Installation
+
+No installation is required. Simply clone this repository or download the scripts to your local machine.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Data Folder HbYX_data_tables
+This folder contains data results files for the ProEnd Scripts project.
+
+## Cite 
+This code can be cited currently as BioRxiv preprint @salcedo2024proend
+
+
+## References 
