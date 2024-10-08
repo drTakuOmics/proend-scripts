@@ -1,7 +1,6 @@
 ---
 title: "ProEnd Pipeline"
 author: "David & Aimer"
-date: "2023-10-08"
 output: github_document
 bibliography: References.bib
 link-citations: true
@@ -67,4 +66,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 This folder contains data results files for the ProEnd Scripts project.
 
 ## Cite 
-This code can be cited currently as BioRxiv preprint:
+This code can be cited currently as BioRxiv preprint @salcedo2024proend
+
+
+## References 

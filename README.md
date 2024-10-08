@@ -1,7 +1,6 @@
 ProEnd Pipeline
 ================
 David & Aimer
-2023-10-08
 
 # ProEnd Scripts
 
@@ -73,4 +72,19 @@ This folder contains data results files for the ProEnd Scripts project.
 
 ## Cite
 
-This code can be cited currently as BioRxiv preprint:
+This code can be cited currently as BioRxiv preprint
+\[[1](#ref-salcedo2024proend)\]
+
+## References
+
+<div id="refs" class="references csl-bib-body">
+
+<div id="ref-salcedo2024proend" class="csl-entry">
+
+1\. Salcedo-Tacuma DM, Howells G, McHose C, Gutierrez-Diaz A, Smith DM.
+ProEnd: A comprehensive database for identifying HbYX motif-containing
+proteins across the tree of life. bioRxiv. 2024;2024–06.
+
+</div>
+
+</div>
