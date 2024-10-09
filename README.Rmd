@@ -1,11 +1,20 @@
 ---
-title: "ProEnd Pipeline"
-author: "David & Aimer"
+title: "ProEnd Pipeline 1.0"
 output: github_document
 bibliography: References.bib
 link-citations: true
 csl: https://raw.githubusercontent.com/citation-style-language/styles/master/biomed-central.csl
 ---
+```{r, , include=FALSE}
+#options(scipen=999) #non scientific ; options(scipen=0) # scientific notation
+#BiocManager::install(c("biomaRt","org.At.tair.db","enrichplot","GOSemSim","clusterProfiler"))
+library("biomaRt")
+library(org.At.tair.db)
+library(clusterProfiler)
+library(GOSemSim)
+library(enrichplot)
+library(ggplot2)
+```
 
 # ProEnd Scripts
 
@@ -22,12 +31,12 @@ This script formats a multi-entry FASTA file into a single line per entry format
 
 Ensure you have the necessary FASTA file in the same directory or specify the path to the file. Execute the script by running:
 
-`#!bash
-./HbYX-First.bash`
+`./HbYX-First.bash`
 
 or 
 
 `bash HbYX-First.bash `
+
 This will output a file named `multifasta.ol.fa`, containing all the sequences from the original FASTA file, formatted for further processing.
 
 ### 2. HbYX-Second-Script.bash
@@ -38,19 +47,19 @@ This script searches for a specific HbYX-motif at the C-terminus of the protein 
 
 Run the script using:
 
-`#!bash
-./HbYX-Second-Script.bash`
+`./HbYX-Second-Script.bash`
 
 or 
 
 `bash HbYX-Second-Script.bash`
+
 It will produce a file named `2aa.txt`, containing the motifs found along with the corresponding header from the FASTA file, if available.
 
 ### Testing ProEND with *Arabidopsis proteome*
 
 Download (Reviewed Swiss-Pro) Arabidopsis [proteome from Uniprot](https://www.uniprot.org/uniprotkb?query=arabidopsis&facets=reviewed%3Atrue)
 
-1. Fasta linearization 
+#### 1. Fasta linearization
 
 ```{bash, eval=TRUE}
 zcat Arabidopsis_uniprot_proteome/uniprotkb_arabidopsis_AND_reviewed_true_2024_10_08.fasta.gz | head -n 2
@@ -58,26 +67,96 @@ zcat Arabidopsis_uniprot_proteome/uniprotkb_arabidopsis_AND_reviewed_true_2024_1
 
 ```{bash, eval=TRUE}
 bash HbYX-First.awk Arabidopsis_uniprot_proteome/uniprotkb_arabidopsis_AND_reviewed_true_2024_10_08.fasta.gz Arabidopsis_uniprot_proteome/arabidopsis_uniprot_proteome.ol.fa
+``` 
+
+```{bash, eval=TRUE, include=FALSE}
 head -n 2 Arabidopsis_uniprot_proteome/arabidopsis_uniprot_proteome.ol.fa
+#Removing non Arabidopsis sequences 
+grep -A 1 --no-group-separator "OS=Arabidopsis thaliana"  Arabidopsis_uniprot_proteome/arabidopsis_uniprot_proteome.ol.fa >  Arabidopsis_uniprot_proteome/arabidopsis_uniprot_proteome.ol_clean.fa
 ```
 
-2. HbYX motif prediction 
+#### 2. HbYX motif prediction 
 ```{bash, eval=TRUE}
-bash HbYX-Second-Script.awk  Arabidopsis_uniprot_proteome/arabidopsis_uniprot_proteome.ol.fa  Arabidopsis_uniprot_proteome/arabidopsis_HbyX_proteome.txt
+bash HbYX-Second-Script.awk  Arabidopsis_uniprot_proteome/arabidopsis_uniprot_proteome.ol_clean.fa  Arabidopsis_uniprot_proteome/arabidopsis_HbyX_proteome.txt
 ```
 
 Total number of HbYX motif candidates: 
 ```{bash, eval=TRUE}
-wc -l Arabidopsis_uniprot_proteome/arabidopsis_HbyX_proteome.txt 
+grep -c ">" Arabidopsis_uniprot_proteome/arabidopsis_HbyX_proteome.txt 
 ```
 
-3. Testing CDC48A as HbYX proteasome regulatory protein
+#### 3. Exploring conserved HbYX proteasome regulatory protein
 
-<!-- CDC48A (At3g09840) from Arabidopsis -->
 ```{bash, eval=TRUE}
-grep -i cdc48 -A 1 --no-group-separator Arabidopsis_uniprot_proteome/arabidopsis_HbyX_proteome.txt 
+grep --no-group-separator -A 1 -i "proteasome"  Arabidopsis_uniprot_proteome/arabidopsis_HbyX_proteome.txt 
 ```
 
+#### 4. Expanding to new regulatory candidates
+
+Mapping TAIR Arabidopsis IDs using biomaRt
+
+```{bash, eval=FALSE, include=FALSE}
+grep ">"  Arabidopsis_uniprot_proteome/arabidopsis_HbyX_proteome.txt | awk -F'|' '{print $2}' > Arabidopsis_uniprot_proteome/uniprot_ids.txt
+```
+Getting entrezID and running GO terms analysis 
+
+```{r,  include=TRUE}
+uniprot_ids <- read.csv("Arabidopsis_uniprot_proteome/uniprot_ids.txt", header = F)
+ensembl <- useMart("plants_mart", dataset = "athaliana_eg_gene", host = "https://plants.ensembl.org")
+mapping <- getBM(
+  attributes = c("uniprotswissprot", "entrezgene_id"), # "tair_locus"),
+  filters = "uniprotswissprot",
+  values = uniprot_ids,
+  mart = ensembl
+)
+
+all_uniprot_df <- as.data.frame( uniprot_ids)
+colnames(all_uniprot_df ) <- c("uniprotswissprot")
+
+uniprot2entrez <- merge(all_uniprot_df, mapping, by = "uniprotswissprot", all.x = TRUE)
+print(paste("Uniprot ids:", nrow(uniprot_ids), " Entrez ids:", nrow(mapping), " Non mapped ids:",  nrow(uniprot_ids) -  nrow(mapping), sep = ""))
+#Non mapped IDs
+#uniprot2TAIR[is.na(uniprot2TAIR$tair_locus),]
+
+ego <- enrichGO(gene  = uniprot2entrez[!is.na(uniprot2entrez$entrezgene_id),2], 
+                OrgDb         = org.At.tair.db,
+                ont           = "BP", #"MF"
+                pAdjustMethod = "BH",
+                pvalueCutoff  = 0.01,
+                qvalueCutoff  = 0.05,
+                readable      = TRUE) #library(clusterProfiler)
+
+ego_at <- attributes(ego )
+Whole_table <- ego_at$result
+write.csv(Whole_table, "Arabidopsis_uniprot_proteome/GO_HbYX_Arabidopsis.csv") 
+d <- godata('org.At.tair.db', ont="BP") #library(GOSemSim)
+
+ego2 <- pairwise_termsim(ego, method="Wang", semData = d) #library(enrichplot)
+```
+```{r,  include=FALSE}
+gos_clustered <-  treeplot(ego2 )
+
+ggsave(filename = "Arabidopsis_uniprot_proteome/ara_go_BP_tree.svg", plot = gos_clustered,device = "svg", width=13, height=7)
+#ggsave(filename = "Arabidopsis_uniprot_proteome/ara_go_MF_tree.svg", plot = gos_clustered,device = "svg", width=15, height=7)
+row.names(Whole_table) <- NULL
+```
+<div style="text-align: center;">
+<figure>
+<img src="Arabidopsis_uniprot_proteome/ara_go_BP_tree.svg"
+style="width: 100%;height: auto">
+<figcaption style="margin-top: 10px;"><strong>GO terms enrichment of Arabidopsis HbYX contaiting proteins</strong></figcaption>
+</figure>
+<a name="GO_terms_HbYX"></a>
+</div>
+
+#### 5. Testing CDC48A as HbYX proteasome regulatory protein
+
+One of the lesser-known interactors of the 26S proteasome, significantly enriched across several Gene Ontology categories, is the CDC48 gene family, as demonstrated in:
+<!-- CDC48A (At3g09840) from Arabidopsis 
+#head(Whole_table[grepl("proteasome",Whole_table$Description),c(2,3,8)])-->
+```{r, eval=TRUE}
+head(Whole_table[grepl("CDC48",Whole_table$geneID),c(2,3,8)])
+```
 
 ## Requirements
 
@@ -88,15 +167,16 @@ grep -i cdc48 -A 1 --no-group-separator Arabidopsis_uniprot_proteome/arabidopsis
 
 No installation is required. Simply clone this repository or download the scripts to your local machine.
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
 ## Data Folder HbYX_data_tables
 This folder contains data results files for the ProEnd Scripts project.
 
 ## Cite 
 This code can be cited currently as BioRxiv preprint @salcedo2024proend
 
+## License 
+
+The code is freely available to download and run, but it's protected and licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/), meaning you can use it but citing it's source. 
+
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
 ## References 

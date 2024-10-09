@@ -30,16 +30,12 @@ AYK
 GYP
 >sp|Q06548|PBL9_ARATH Probable serine/threonine-protein kinase PBL9 OS=Arabidopsis thaliana OX=3702 GN=PBL9 PE=1 SV=1
 LYV
->sp|Q10M41|EIL1A_ORYSJ Protein ETHYLENE-INSENSITIVE 3-like 1a OS=Oryza sativa subsp. japonica OX=39947 GN=EIL1A PE=1 SV=1
-WYY
 >sp|Q39219|AOX1A_ARATH Ubiquinol oxidase 1a, mitochondrial OS=Arabidopsis thaliana OX=3702 GN=AOX1A PE=1 SV=2
 GYH
 >sp|Q66GP9|NOA1_ARATH NO-associated protein 1, chloroplastic/mitochondrial OS=Arabidopsis thaliana OX=3702 GN=NOA1 PE=1 SV=1
 WYF
 >sp|Q67YI9|EPN2_ARATH Clathrin interactor EPSIN 2 OS=Arabidopsis thaliana OX=3702 GN=EPSIN2 PE=1 SV=1
 GYR
->sp|Q6LAD6|ARPT2_PSEUB Cysteine protease avirulence protein AvrRpt2 OS=Pseudomonas syringae pv. tomato OX=323 GN=avrRpt2 PE=1 SV=1
-LYR
 >sp|Q84J37|LAC15_ARATH Laccase-15 OS=Arabidopsis thaliana OX=3702 GN=TT10 PE=1 SV=1
 CYE
 >sp|Q84WU2|UBP13_ARATH Ubiquitin C-terminal hydrolase 13 OS=Arabidopsis thaliana OX=3702 GN=UBP13 PE=1 SV=1
@@ -130,26 +126,18 @@ LYL
 GYH
 >sp|O23913|AOX1B_ARATH Ubiquinol oxidase 1b, mitochondrial OS=Arabidopsis thaliana OX=3702 GN=AOX1B PE=1 SV=1
 GYH
->sp|O24396|PURA_WHEAT Adenylosuccinate synthetase, chloroplastic (Fragment) OS=Triticum aestivum OX=4565 PE=1 SV=1
-IYK
 >sp|O64764|TRXO1_ARATH Thioredoxin O1, mitochondrial OS=Arabidopsis thaliana OX=3702 GN=At2g35010 PE=1 SV=1
 LYK
 >sp|O82191|MAOP1_ARATH NADP-dependent malic enzyme 1 OS=Arabidopsis thaliana OX=3702 GN=NADP-ME1 PE=1 SV=1
 LYR
 >sp|P26288|NU4C_ARATH NAD(P)H-quinone oxidoreductase chain 4, chloroplastic OS=Arabidopsis thaliana OX=3702 GN=ndhD PE=1 SV=3
 FYG
->sp|Q10S65|NAC22_ORYSJ NAC domain-containing protein 22 OS=Oryza sativa subsp. japonica OX=39947 GN=NAC022 PE=2 SV=1
-LYY
 >sp|Q42599|NDS8A_ARATH NADH dehydrogenase [ubiquinone] iron-sulfur protein 8-A, mitochondrial OS=Arabidopsis thaliana OX=3702 GN=At1g79010 PE=1 SV=1
 LYR
 >sp|Q5E915|RBBP_ARATH Protein RBL OS=Arabidopsis thaliana OX=3702 GN=RBL PE=1 SV=1
 AYY
 >sp|Q66GQ6|IP5P5_ARATH Type I inositol polyphosphate 5-phosphatase 5 OS=Arabidopsis thaliana OX=3702 GN=IP5P5 PE=2 SV=1
 FYD
->sp|Q7XEY9|SPX3_ORYSJ SPX domain-containing protein 3 OS=Oryza sativa subsp. japonica OX=39947 GN=SPX3 PE=1 SV=1
-FYA
->sp|Q88AD1|GLYA1_PSESM Serine hydroxymethyltransferase 1 OS=Pseudomonas syringae pv. tomato (strain ATCC BAA-871 / DC3000) OX=223283 GN=glyA1 PE=3 SV=1
-VYR
 >sp|Q8GWF1|WRK38_ARATH Probable WRKY transcription factor 38 OS=Arabidopsis thaliana OX=3702 GN=WRKY38 PE=1 SV=1
 FYF
 >sp|Q8GWP5|RIBD_ARATH Riboflavin biosynthesis protein PYRD, chloroplastic OS=Arabidopsis thaliana OX=3702 GN=PYRD PE=1 SV=1
@@ -160,14 +148,10 @@ FYR
 LYV
 >sp|Q8RWY7|CYP95_ARATH Peptidyl-prolyl cis-trans isomerase CYP95 OS=Arabidopsis thaliana OX=3702 GN=CYP95 PE=1 SV=2
 AYD
->sp|Q8VWH2|RFT1_ORYSJ Protein RICE FLOWERING LOCUS T 1 OS=Oryza sativa subsp. japonica OX=39947 GN=RFT1 PE=1 SV=1
-VYP
 >sp|Q8W471|AAE15_ARATH Long-chain-fatty-acid--[acyl-carrier-protein] ligase AEE15, chloroplastic OS=Arabidopsis thaliana OX=3702 GN=AAE15 PE=1 SV=1
 LYS
 >sp|Q93WG3|CJD1_ARATH Protein CHLOROPLAST J-LIKE DOMAIN 1, chloroplastic OS=Arabidopsis thaliana OX=3702 GN=CJD1 PE=1 SV=1
 FYR
->sp|Q93WI9|HD3A_ORYSJ Protein HEADING DATE 3A OS=Oryza sativa subsp. japonica OX=39947 GN=HD3A PE=1 SV=1
-VYP
 >sp|Q949W6|KAKU4_ARATH Protein KAKU4 OS=Arabidopsis thaliana OX=3702 GN=KAKU4 PE=1 SV=1
 AYS
 >sp|Q9CA60|C98A9_ARATH Cytochrome P450 98A9 OS=Arabidopsis thaliana OX=3702 GN=CYP98A9 PE=1 SV=1
@@ -224,10 +208,6 @@ VYN
 FYC
 >sp|Q9XFB0|YAB2_ARATH Putative axial regulator YABBY 2 OS=Arabidopsis thaliana OX=3702 GN=YAB2 PE=1 SV=1
 GYY
->sp|A4QJY2|NU4C_OLIPU NAD(P)H-quinone oxidoreductase chain 4, chloroplastic OS=Olimarabidopsis pumila OX=74718 GN=ndhD PE=3 SV=2
-FYG
->sp|A4QKY4|NU4C_CRUWA NAD(P)H-quinone oxidoreductase chain 4, chloroplastic OS=Crucihimalaya wallichii OX=78192 GN=ndhD PE=3 SV=2
-FYG
 >sp|F4HZZ4|RMR6_ARATH Receptor homology region, transmembrane domain- and RING domain-containing protein 6 OS=Arabidopsis thaliana OX=3702 GN=RMR6 PE=3 SV=2
 VYL
 >sp|F4HZZ5|RMR5_ARATH Receptor homology region, transmembrane domain- and RING domain-containing protein 5 OS=Arabidopsis thaliana OX=3702 GN=RMR5 PE=2 SV=1
@@ -250,10 +230,6 @@ FYV
 LYT
 >sp|P59277|SYP81_ARATH Syntaxin-81 OS=Arabidopsis thaliana OX=3702 GN=SYP81 PE=1 SV=2
 WYS
->sp|Q0E0W7|CFL1_ORYSJ Protein CURLY FLAG LEAF 1 OS=Oryza sativa subsp. japonica OX=39947 GN=CFL1 PE=3 SV=2
-GYV
->sp|Q10MQ2|DAPAT_ORYSJ Probable LL-diaminopimelate aminotransferase, chloroplastic OS=Oryza sativa subsp. japonica OX=39947 GN=AGD2 PE=2 SV=1
-LYK
 >sp|Q38821|2ABA_ARATH Serine/threonine protein phosphatase 2A 55 kDa regulatory subunit B alpha isoform OS=Arabidopsis thaliana OX=3702 GN=PP2AB1 PE=1 SV=2
 YYA
 >sp|Q39247|2ABB_ARATH Serine/threonine protein phosphatase 2A 55 kDa regulatory subunit B beta isoform OS=Arabidopsis thaliana OX=3702 GN=PP2AB2 PE=1 SV=1
@@ -262,14 +238,6 @@ YYA
 YYR
 >sp|Q4PSK3|FLZ16_ARATH FCS-Like Zinc finger 16 OS=Arabidopsis thaliana OX=3702 GN=FLZ16 PE=1 SV=1
 FYI
->sp|Q6EJ97|ISPS_PUEML Isoprene synthase, chloroplastic OS=Pueraria montana var. lobata OX=3893 GN=ISPS PE=1 SV=1
-MYV
->sp|Q6T7E8|PURA_TOBAC Adenylosuccinate synthetase, chloroplastic OS=Nicotiana tabacum OX=4097 GN=PURA PE=2 SV=1
-IYK
->sp|Q7XR06|P2C45_ORYSJ Probable protein phosphatase 2C 45 OS=Oryza sativa subsp. japonica OX=39947 GN=Os04g0659500 PE=2 SV=2
-GYA
->sp|Q87WW0|CYSD_PSESM Sulfate adenylyltransferase subunit 2 OS=Pseudomonas syringae pv. tomato (strain ATCC BAA-871 / DC3000) OX=223283 GN=cysD PE=1 SV=1
-GYF
 >sp|Q8L836|MA657_ARATH 65-kDa microtubule-associated protein 7 OS=Arabidopsis thaliana OX=3702 GN=MAP65-7 PE=2 SV=1
 LYN
 >sp|Q8LEE9|FLA12_ARATH Fasciclin-like arabinogalactan protein 12 OS=Arabidopsis thaliana OX=3702 GN=FLA12 PE=2 SV=2
@@ -284,8 +252,6 @@ GYR
 AYL
 >sp|Q94C11|SUGP1_ARATH SURP and G-patch domain-containing protein 1-like protein OS=Arabidopsis thaliana OX=3702 GN=At3g52120 PE=1 SV=1
 AYY
->sp|Q9AT28|NPP1_PHYNI Necrosis-inducing protein NPP1 OS=Phytophthora nicotianae OX=4792 GN=NPP1 PE=1 SV=1
-YYA
 >sp|Q9FGK4|B561J_ARATH Cytochrome b561 and DOMON domain-containing protein At5g47530 OS=Arabidopsis thaliana OX=3702 GN=At5g47530 PE=2 SV=1
 LYV
 >sp|Q9FJ16|APRR4_ARATH Putative two-component response regulator-like APRR4 OS=Arabidopsis thaliana OX=3702 GN=APRR4 PE=3 SV=1
@@ -342,8 +308,6 @@ YYR
 AYD
 >sp|Q9ZWG1|PUMP2_ARATH Mitochondrial uncoupling protein 2 OS=Arabidopsis thaliana OX=3702 GN=PUMP2 PE=2 SV=1
 LYD
->sp|D7LTJ4|CSPLN_ARALL CASP-like protein ARALYDRAFT_485429 OS=Arabidopsis lyrata subsp. lyrata OX=81972 GN=ARALYDRAFT_485429 PE=3 SV=2
-LYY
 >sp|F4IKF6|SPNS3_ARATH Probable sphingolipid transporter spinster homolog 3 OS=Arabidopsis thaliana OX=3702 GN=At2g22730 PE=3 SV=1
 GYS
 >sp|O04251|Y4211_ARATH BRCT domain-containing protein At4g02110 OS=Arabidopsis thaliana OX=3702 GN=At4g02110 PE=4 SV=3
@@ -400,12 +364,6 @@ GYV
 AYR
 >sp|Q5BQ04|TET16_ARATH Tetraspanin-16 OS=Arabidopsis thaliana OX=3702 GN=TET16 PE=2 SV=1
 YYS
->sp|Q87ZD5|IOLG_PSESM Inositol 2-dehydrogenase OS=Pseudomonas syringae pv. tomato (strain ATCC BAA-871 / DC3000) OX=223283 GN=iolG PE=3 SV=1
-FYA
->sp|Q880Z4|XYLA_PSESM Xylose isomerase OS=Pseudomonas syringae pv. tomato (strain ATCC BAA-871 / DC3000) OX=223283 GN=xylA PE=3 SV=1
-IYT
->sp|Q881Z4|NFUA_PSESM Fe/S biogenesis protein NfuA OS=Pseudomonas syringae pv. tomato (strain ATCC BAA-871 / DC3000) OX=223283 GN=nfuA PE=3 SV=1
-AYY
 >sp|Q8GYX8|DNJ10_ARATH Chaperone protein dnaJ 10 OS=Arabidopsis thaliana OX=3702 GN=ATJ10 PE=2 SV=2
 GYD
 >sp|Q8L586|Y4958_ARATH Uncharacterized membrane protein At4g09580 OS=Arabidopsis thaliana OX=3702 GN=At4g09580 PE=1 SV=1
