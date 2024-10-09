@@ -142,7 +142,7 @@ row.names(Whole_table) <- NULL
 ```
 <div style="text-align: center;">
 <figure>
-<img src="Arabidopsis_uniprot_proteome/ara_go_tree.svg"
+<img src="Arabidopsis_uniprot_proteome/ara_go_BP_tree.svg"
 style="width: 100%;height: auto">
 <figcaption style="margin-top: 10px;"><strong>GO terms enrichment of Arabidopsis HbYX contaiting proteins</strong></figcaption>
 </figure>

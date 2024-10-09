@@ -136,7 +136,7 @@ print(paste("Uniprot ids:", nrow(uniprot_ids), " Entrez ids:", nrow(mapping), " 
 
 ego <- enrichGO(gene  = uniprot2entrez[!is.na(uniprot2entrez$entrezgene_id),2], 
                 OrgDb         = org.At.tair.db,
-                ont           = "BP",
+                ont           = "BP", #"MF"
                 pAdjustMethod = "BH",
                 pvalueCutoff  = 0.01,
                 qvalueCutoff  = 0.05,
@@ -159,7 +159,7 @@ ego2 <- pairwise_termsim(ego, method="Wang", semData = d) #library(enrichplot)
 <div style="text-align: center;">
 
 <figure>
-<img src="Arabidopsis_uniprot_proteome/ara_go_tree.svg"
+<img src="Arabidopsis_uniprot_proteome/ara_go_BP_tree.svg"
 style="width: 100%;height: auto">
 <figcaption style="margin-top: 10px;">
 <strong>GO terms enrichment of Arabidopsis HbYX contaiting
@@ -171,11 +171,12 @@ proteins</strong>
 
 </div>
 
-5.  Testing CDC48A as HbYX proteasome regulatory protein
+#### 5. Testing CDC48A as HbYX proteasome regulatory protein
 
 One of the lesser-known interactors of the 26S proteasome, significantly
 enriched across several Gene Ontology categories, is the CDC48 gene
-family, as demonstrated in: <!-- CDC48A (At3g09840) from Arabidopsis -->
+family, as demonstrated in: <!-- CDC48A (At3g09840) from Arabidopsis 
+#head(Whole_table[grepl("proteasome",Whole_table$Description),c(2,3,8)])-->
 
 ``` r
 head(Whole_table[grepl("CDC48",Whole_table$geneID),c(2,3,8)])
