@@ -162,7 +162,7 @@ ego2 <- pairwise_termsim(ego, method="Wang", semData = d) #library(enrichplot)
 <img src="Arabidopsis_uniprot_proteome/ara_go_BP_tree.svg"
 style="width: 100%;height: auto">
 <figcaption style="margin-top: 10px;">
-<strong>GO terms enrichment of Arabidopsis HbYX contaiting
+<strong>GO terms enrichment of Arabidopsis HbYX containing
 proteins</strong>
 </figcaption>
 </figure>
