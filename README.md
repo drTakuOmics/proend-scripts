@@ -216,6 +216,16 @@ This folder contains data results files for the ProEnd Scripts project.
 This code can be cited currently as BioRxiv preprint
 \[[1](#ref-salcedo2024proend)\]
 
+## License
+
+The code is freely available to download and run, but it’s protected and
+licensed under a [Creative Commons Attribution-ShareAlike 4.0
+International License](https://creativecommons.org/licenses/by-nc/4.0/),
+meaning you can use it but citing it’s source.
+
+[![License: CC BY-NC
+4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+
 ## References
 
 <div id="refs" class="references csl-bib-body">
