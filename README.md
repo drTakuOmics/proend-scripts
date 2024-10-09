@@ -105,7 +105,7 @@ grep --no-group-separator -A 1 -i "proteasome"  Arabidopsis_uniprot_proteome/ara
     ## >sp|Q9SSB5|PRS7A_ARATH 26S proteasome regulatory subunit 7 homolog A OS=Arabidopsis thaliana OX=3702 GN=RPT1A PE=1 SV=1
     ## VYN
 
-#### 4. Expanding to new regulatory candidates
+#### 4. Exploring novel regulatory candidates
 
 Mapping TAIR Arabidopsis IDs using biomaRt
 
@@ -171,9 +171,9 @@ proteins</strong>
 
 </div>
 
-#### 5. Testing CDC48A as HbYX proteasome regulatory protein
+#### 5. HbYX protein CDC48A as a potential proteasome regulator
 
-One of the lesser-known interactors of the 26S proteasome, significantly
+One proposed and controversial candidate for 20S proteasome regulation, significantly
 enriched across several Gene Ontology categories, is the CDC48 gene
 family, as demonstrated in: <!-- CDC48A (At3g09840) from Arabidopsis 
 #head(Whole_table[grepl("proteasome",Whole_table$Description),c(2,3,8)])-->
