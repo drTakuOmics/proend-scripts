@@ -197,6 +197,28 @@ head(Whole_table[grepl("CDC48",Whole_table$geneID),c(2,3,8)])
     ## 14                                           ATCDC48/AtCDC48C/AtCDC48B
     ## 17                                           ATCDC48/AtCDC48C/AtCDC48B
 
+#### 6. Reconstruction a potential interaction of CDC48 and the 20S proteasome.
+
+Due its potential we decided to further proceed and reconstruct in-silico a CDC48 complex.
+CDC48 posess a known AAA+ domain which indicates the formation of a homo-oligomer, commonly
+an hexamer is formed in the proteins with this domain. You can proceed and use alphafold V2 multimer
+or alphafold V3 which allows to use ligands such as ATP.
+
+<div style="text-align: center;">
+
+<figure>
+<img src="Arabidopsis_uniprot_proteome/ara_go_BP_tree.svg"
+style="width: 100%;height: auto">
+<figcaption style="margin-top: 10px;">
+<strong>GO terms enrichment of Arabidopsis HbYX containing
+proteins</strong>
+</figcaption>
+</figure>
+
+<a name="GO_terms_HbYX"></a>
+
+</div>
+
 ## Requirements
 
 - Unix-like environment
