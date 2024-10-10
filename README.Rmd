@@ -181,7 +181,7 @@ As expected, the CDC-48 homohexamer predictions show robust pTM values, with 0.6
 
 #### 6. Computational reconstruction of the potential interaction between CDC48 and the 20S proteasome.
 
-As shown for the archaeal AAA ATPase "MJ1494" @salcedo2024proend, we proceeded with a molecular docking of the CDC48 complex with the 20S proteasome using ChimeraX or any preferred molecular docking tool
+As shown for the archaeal AAA ATPase PAN-2 "MJ1494" @salcedo2024proend, we proceeded with a molecular docking of the CDC48 complex with the 20S proteasome using ChimeraX or any preferred molecular docking tool
 <div style="text-align: center;">
 
 <figure>
