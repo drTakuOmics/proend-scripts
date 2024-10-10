@@ -232,7 +232,7 @@ This change facilitates interaction with the 20S proteasome to open the gate for
 <img src="Arabidopsis_uniprot_proteome/CDC48-20S.png"
 style="width: 100%;height: auto">
 <figcaption style="margin-top: 10px;">
-<strong>Potential CDC48-20S complex formation.HbYX motif in orange
+<strong>Potential CDC48-20S complex formation. HbYX motif in orange. 20S in gray
 </strong>
 </figcaption>
 </figure>
