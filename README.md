@@ -211,7 +211,7 @@ Although the CDC48a homohexameric complex structure has been already
 elucidated using X-ray diffraction
 (6HD3)\[[3](#ref-banchenko2019common)\], the crystallization process
 excluded terminal residues, therefore [it lacks the HbYX tails in the
-strucutre](https://www.rcsb.org/structure/6HD3). Given its potential, we
+structure](https://www.rcsb.org/structure/6HD3). Given its potential, we
 decided to proceed with an in-silico reconstruction of the whole CDC48a
 complex. CDC48 contains a well-characterized AAA+ domain, which is
 typically associated with the formation of a homo-oligomer, most
