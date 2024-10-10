@@ -219,9 +219,9 @@ commonly a hexamer in proteins of this type. For this reconstruction,
 AlphaFold V2 Multimer or AlphaFold V3 can be used, the latter allowing
 the inclusion of ligands such as ATP \[[4](#ref-abramson2024accurate)\].
 
-<div style="text-align: center;">
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
 
-<figure>
+<figure style="text-align: center;">
 <img src="Arabidopsis_uniprot_proteome/CDC-48.png"
 style="width: 100%;height: auto">
 <figcaption style="margin-top: 10px;">

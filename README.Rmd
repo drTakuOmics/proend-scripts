@@ -165,8 +165,8 @@ The CDC48 complex is a critical component in *Arabidopsis thaliana* that mediate
 
 Although the CDC48a homohexameric complex structure has been already elucidated using X-ray diffraction (6HD3)@banchenko2019common, the crystallization process excluded terminal residues, therefore [it lacks the HbYX tails in the strucutre](https://www.rcsb.org/structure/6HD3).  Given its potential, we decided to proceed with an in-silico reconstruction of the whole CDC48a complex. CDC48 contains a well-characterized AAA+ domain, which is typically associated with the formation of a homo-oligomer, most commonly a hexamer in proteins of this type. For this reconstruction, AlphaFold V2 Multimer or AlphaFold V3  can be used, the latter allowing the inclusion of ligands such as ATP @abramson2024accurate.
 
-<div style="text-align: center;">
-<figure>
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<figure style="text-align: center;">
 <img src="Arabidopsis_uniprot_proteome/CDC-48.png"
 style="width: 100%;height: auto">
 <figcaption style="margin-top: 10px;">
@@ -192,9 +192,7 @@ style="width: 100%;height: auto">
 </strong>
 </figcaption>
 </figure>
-
 <a name="_HbYX"></a>
-
 </div>
 
 Upon docking, the HbYX motif of CDC48, in the presence of ATP, is positioned optimally for interaction with the alpha pockets of the 20S proteasome, potentially facilitating gate opening and activation
