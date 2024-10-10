@@ -224,7 +224,8 @@ Interestingly, the HbYX motif can be observed shifting from the outer structure 
 seen in substrate-processing ATPases that interact with the 20S proteasome upon substrate engagement. 
 This change facilitates interaction with the 20S proteasome to open the gate for substrate entry.
 
-You can go ahead and perform  molecular docking with the 20S proeteasome by using ChimeraX or the tool you like.
+
+#### You can proceed with molecular docking of the CDC48 complex with the 20S proteasome using ChimeraX or any preferred molecular docking tool.
 <div style="text-align: center;">
 
 <figure>
@@ -239,6 +240,29 @@ style="width: 100%;height: auto">
 <a name="_HbYX"></a>
 
 </div>
+
+Upon docking you can appreciate that the HbYX motif of CDC48 in the prescense of ATp is oriented in a perfect position for interaction 
+with the alpha pockets of the 20S proteasome and potentially inducing open gating and activation.
+
+#### 7. Conclusion and Future Potential.
+
+This example demonstrates how to generate and explore hypotheses using our tool, ProEnd. In this case, we focused on HbYX-containing proteins
+from *Arabidopsis thaliana*, one of the most extensively studied model organisms in biology. Using ProEnd, we successfully identified 
+known HbYX-containing proteins, including the 19S-26S regulatory proteins, and discovered enriched candidates (CDC48-p97) with potential 
+for novel interactions with the 20S proteasome, expanding our understanding of proteasome biology and proteostasis.
+
+The formation of the CDC48-20S complex remains a topic of debate. Some researchers argue that the 19S-20S complexes, also referred to as 26S
+proteasomes, represent the vast majority of proteasomes in the cell. However, various cellular contexts demand alternative proteasome
+configurations. For instance, there are well-documented cases of 20S complexes interacting with other molecules, such as PA28, PA200, and PI31.
+CDC48 is particularly relevant in unique cellular environments that require the degradation of tightly folded substrates. These substrates,
+after folding, may directly engage the 20S proteasome without the need for 19S caps, providing a distinct scenario for CDC48-20S complex
+formation, potentially in the ER or chloroplast.
+
+The conservation of the HbYX motif in CDC48 across different kingdoms (from archea to eukaryotes) suggests a conserved mechanism for direct
+degradation through the 20S proteasome without intermediaries, further supporting the idea that CDC48 plays a crucial role in specific
+proteolytic pathways.
+
+
 ## Requirements
 
 - Unix-like environment
