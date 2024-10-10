@@ -207,11 +207,11 @@ or alphafold V3 which allows to use ligands such as ATP.
 <div style="text-align: center;">
 
 <figure>
-<img src="Arabidopsis_uniprot_proteome/ara_go_BP_tree.svg"
+<img src="Arabidopsis_uniprot_proteome/CDC-48.png"
 style="width: 100%;height: auto">
 <figcaption style="margin-top: 10px;">
-<strong>GO terms enrichment of Arabidopsis HbYX containing
-proteins</strong>
+<strong>CDC-48 Hexamer prediction with and without ATP.
+</strong>
 </figcaption>
 </figure>
 
