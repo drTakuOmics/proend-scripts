@@ -241,8 +241,8 @@ style="width: 100%;height: auto">
 
 </div>
 
-Upon docking you can appreciate that the HbYX motif of CDC48 in the prescense of ATp is oriented in a perfect position for interaction 
-with the alpha pockets of the 20S proteasome and potentially inducing open gating and activation.
+Upon docking, the HbYX motif of CDC48, in the presence of ATP, is positioned optimally for interaction with the alpha pockets of the 20S
+proteasome, potentially facilitating gate opening and activation
 
 #### 7. Conclusion and Future Potential.
 
