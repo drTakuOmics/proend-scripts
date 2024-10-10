@@ -105,7 +105,7 @@ grep --no-group-separator -A 1 -i "proteasome"  Arabidopsis_uniprot_proteome/ara
     ## >sp|Q9SSB5|PRS7A_ARATH 26S proteasome regulatory subunit 7 homolog A OS=Arabidopsis thaliana OX=3702 GN=RPT1A PE=1 SV=1
     ## VYN
 
-#### 4. Exploring novel regulatory candidates
+#### 4. Expanding to new regulatory candidates
 
 Mapping TAIR Arabidopsis IDs using biomaRt
 
@@ -162,7 +162,7 @@ ego2 <- pairwise_termsim(ego, method="Wang", semData = d) #library(enrichplot)
 <img src="Arabidopsis_uniprot_proteome/ara_go_BP_tree.svg"
 style="width: 100%;height: auto">
 <figcaption style="margin-top: 10px;">
-<strong>GO terms enrichment of Arabidopsis HbYX containing
+<strong>GO terms enrichment of Arabidopsis HbYX contaiting
 proteins</strong>
 </figcaption>
 </figure>
@@ -173,9 +173,10 @@ proteins</strong>
 
 #### 5. HbYX protein CDC48A as a potential proteasome regulator
 
-One proposed and controversial candidate for 20S proteasome regulation, significantly
-enriched across several Gene Ontology categories, is the CDC48 gene
-family, as demonstrated in: <!-- CDC48A (At3g09840) from Arabidopsis 
+One proposed and controversial candidate for 20S proteasome regulation,
+significantly enriched across several Gene Ontology categories, is the
+CDC48 gene family, as demonstrated in:
+<!-- CDC48A (At3g09840) from Arabidopsis 
 #head(Whole_table[grepl("proteasome",Whole_table$Description),c(2,3,8)])-->
 
 ``` r
@@ -183,57 +184,81 @@ head(Whole_table[grepl("CDC48",Whole_table$geneID),c(2,3,8)])
 ```
 
     ##                                                          Description GeneRatio
-    ## 5                                      response to misfolded protein     4/196
-    ## 7  proteasome-mediated ubiquitin-dependent protein catabolic process    10/196
-    ## 11                             proteasomal protein catabolic process    10/196
-    ## 12                           protein exit from endoplasmic reticulum     3/196
-    ## 14                 ER-associated misfolded protein catabolic process     3/196
-    ## 17                            cellular response to misfolded protein     3/196
+    ## 8                                      response to misfolded protein     4/163
+    ## 10 proteasome-mediated ubiquitin-dependent protein catabolic process    10/163
+    ## 13                           protein exit from endoplasmic reticulum     3/163
+    ## 14                             proteasomal protein catabolic process    10/163
+    ## 15                 ER-associated misfolded protein catabolic process     3/163
+    ## 16                            cellular response to misfolded protein     3/163
     ##                                                                 geneID
-    ## 5                                      ATCDC48/AtCDC48C/AtCDC48B/RPT2a
-    ## 7  RPT5B/ATCDC48/AtCDC48C/AtCDC48B/ATS6A.2/RPT3/ARI9/RPT2b/RPT1A/RPT2a
-    ## 11 RPT5B/ATCDC48/AtCDC48C/AtCDC48B/ATS6A.2/RPT3/ARI9/RPT2b/RPT1A/RPT2a
-    ## 12                                           ATCDC48/AtCDC48C/AtCDC48B
-    ## 14                                           ATCDC48/AtCDC48C/AtCDC48B
-    ## 17                                           ATCDC48/AtCDC48C/AtCDC48B
+    ## 8                                      ATCDC48/AtCDC48C/AtCDC48B/RPT2a
+    ## 10 RPT5B/ATCDC48/AtCDC48C/AtCDC48B/ATS6A.2/RPT3/ARI9/RPT2b/RPT1A/RPT2a
+    ## 13                                           ATCDC48/AtCDC48C/AtCDC48B
+    ## 14 RPT5B/ATCDC48/AtCDC48C/AtCDC48B/ATS6A.2/RPT3/ARI9/RPT2b/RPT1A/RPT2a
+    ## 15                                           ATCDC48/AtCDC48C/AtCDC48B
+    ## 16                                           ATCDC48/AtCDC48C/AtCDC48B
 
-#### 6. Reconstruction a potential interaction of CDC48 and the 20S proteasome.
+The CDC48 complex is a critical component in *Arabidopsis thaliana* that
+mediates ubiquitin-dependent degradation of intra-chloroplast proteins
+and regulates substrates like RbcL and AtpB via the proteasome pathway
+in response to oxidative stress \[[1](#ref-li2022cdc48)\]. The presence
+of an HbYX motif in this protein, which facilitate substrate recognition
+and processing in other AAA+ ATPases proteins
+\[[2](#ref-salcedo2024proend)\], may enable CDC48 to bind directly to
+the 20S proteasome, influencing protein homeostasis in plants.
 
-Given its potential, we decided to proceed with an in-silico reconstruction of the CDC48 complex in this example. 
-CDC48 contains a well-characterized AAA+ domain, which is typically associated with the formation of a homo-oligomer, 
-most commonly a hexamer in proteins of this type. For this reconstruction, AlphaFold V2 Multimer or AlphaFold V3 can be used, 
-the latter allowing the inclusion of ligands such as ATP.
+Although the CDC48a homohexameric complex structure has been already
+elucidated using X-ray diffraction
+(6HD3)\[[3](#ref-banchenko2019common)\], the crystallization process
+excluded terminal residues, therefore [it lacks the HbYX tails in the
+strucutre](https://www.rcsb.org/structure/6HD3). Given its potential, we
+decided to proceed with an in-silico reconstruction of the whole CDC48a
+complex. CDC48 contains a well-characterized AAA+ domain, which is
+typically associated with the formation of a homo-oligomer, most
+commonly a hexamer in proteins of this type. For this reconstruction,
+AlphaFold V2 Multimer or AlphaFold V3 can be used, the latter allowing
+the inclusion of ligands such as ATP \[[4](#ref-abramson2024accurate)\].
 
-<div style="text-align: center;">
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
 
-<figure>
+<figure style="text-align: center;">
 <img src="Arabidopsis_uniprot_proteome/CDC-48.png"
 style="width: 100%;height: auto">
 <figcaption style="margin-top: 10px;">
-<strong>CDC-48 Hexamer prediction with and without ATP. HbYX motif in orange
-</strong>
+<strong>CDC-48 Hexamer prediction with and without ATP. HbYX motif in
+orange </strong>
 </figcaption>
 </figure>
 
-<a name="_HbYX"></a>
+<a name="HbYX"></a>
 
 </div>
-As expected, the CDC-48 homohexamer predictions show robust pTM values, with 0.61 in the absence of ATP and 0.55 in the presence of ATP. 
-A pTM score above 0.5 indicates that the predicted overall structure of the complex is likely to resemble the true native structure.
-Interestingly, the HbYX motif can be observed shifting from the outer structure to the inner portion, a conformational change commonly 
-seen in substrate-processing ATPases that interact with the 20S proteasome upon substrate engagement. 
-This change facilitates interaction with the 20S proteasome to open the gate for substrate entry.
 
+As expected, the CDC-48 homohexamer predictions show robust pTM values,
+with 0.61 in the absence of ATP and 0.55 in the presence of ATP. A pTM
+score above 0.5 indicates that the predicted overall structure of the
+complex is likely to resemble the true native structure. Interestingly,
+the HbYX motif can be observed shifting from the outer structure to the
+inner portion, a conformational change commonly seen in
+substrate-processing ATPases that interact with the 20S proteasome upon
+substrate engagement. This change facilitates interaction with the 20S
+proteasome to open the gate for substrate entry.
 
-#### You can proceed with molecular docking of the CDC48 complex with the 20S proteasome using ChimeraX or any preferred molecular docking tool.
+#### 6. Computational reconstruction of the potential interaction between CDC48 and the 20S proteasome.
+
+As shown for the archaeal AAA ATPase “MJ1494”
+\[[2](#ref-salcedo2024proend)\], we proceeded with a molecular docking
+of the CDC48 complex with the 20S proteasome using ChimeraX or any
+preferred molecular docking tool
+
 <div style="text-align: center;">
 
 <figure>
 <img src="Arabidopsis_uniprot_proteome/CDC48-20S.png"
 style="width: 100%;height: auto">
 <figcaption style="margin-top: 10px;">
-<strong>Potential CDC48-20S complex formation. HbYX motif in orange. 20S in gray
-</strong>
+<strong>Potential CDC48-20S complex formation. HbYX motif in orange. 20S
+in gray </strong>
 </figcaption>
 </figure>
 
@@ -241,27 +266,38 @@ style="width: 100%;height: auto">
 
 </div>
 
-Upon docking, the HbYX motif of CDC48, in the presence of ATP, is positioned optimally for interaction with the alpha pockets of the 20S
+Upon docking, the HbYX motif of CDC48, in the presence of ATP, is
+positioned optimally for interaction with the alpha pockets of the 20S
 proteasome, potentially facilitating gate opening and activation
 
-#### 7. Conclusion and Future Potential.
+### 3. Conclusion and Future Potential.
 
-This example demonstrates how to generate and explore hypotheses using our tool, ProEnd. In this case, we focused on HbYX-containing proteins
-from *Arabidopsis thaliana*, one of the most extensively studied model organisms in biology. Using ProEnd, we successfully identified 
-known HbYX-containing proteins, including the 19S-26S regulatory proteins, and discovered enriched candidates (CDC48-p97) with potential 
-for novel interactions with the 20S proteasome, expanding our understanding of proteasome biology and proteostasis.
+This example demonstrates how to generate and explore hypotheses using
+our tool, ProEnd. In this case, we focused on HbYX-containing proteins
+from *Arabidopsis thaliana*, one of the most extensively studied model
+organisms in biology. Using ProEnd, we successfully identified known
+HbYX-containing proteins, including the 19S-26S regulatory proteins, and
+discovered enriched candidates (CDC48-p97) with potential for novel
+interactions with the 20S proteasome, expanding our understanding of
+proteasome biology and proteostasis.
 
-The formation of the CDC48-20S complex remains a topic of debate. Some researchers argue that the 19S-20S complexes, also referred to as 26S
-proteasomes, represent the vast majority of proteasomes in the cell. However, various cellular contexts demand alternative proteasome
-configurations. For instance, there are well-documented cases of 20S complexes interacting with other molecules, such as PA28, PA200, and PI31.
-CDC48 is particularly relevant in unique cellular environments that require the degradation of tightly folded substrates. These substrates,
-after folding, may directly engage the 20S proteasome without the need for 19S caps, providing a distinct scenario for CDC48-20S complex
-formation, potentially in the ER or chloroplast.
+The formation of the CDC48-20S complex remains a topic of debate. Some
+researchers argue that the 19S-20S complexes, also referred to as 26S
+proteasomes, represent the vast majority of proteasomes in the cell.
+However, various cellular contexts demand alternative proteasome
+configurations. For instance, there are well-documented cases of 20S
+complexes interacting with other molecules, such as PA28, PA200, and
+PI31. CDC48 is particularly relevant in unique cellular environments
+that require the degradation of tightly folded substrates. These
+substrates, after folding, may directly engage the 20S proteasome
+without the need for 19S caps, providing a distinct scenario for
+CDC48-20S complex formation, potentially in the ER or chloroplast.
 
-The conservation of the HbYX motif in CDC48 across different kingdoms (from archea to eukaryotes) suggests a conserved mechanism for direct
-degradation through the 20S proteasome without intermediaries, further supporting the idea that CDC48 plays a crucial role in specific
+The conservation of the HbYX motif in CDC48 across different kingdoms
+(from archea to eukaryotes) suggests a conserved mechanism for direct
+degradation through the 20S proteasome without intermediaries, further
+supporting the idea that CDC48 plays a crucial role in specific
 proteolytic pathways.
-
 
 ## Requirements
 
@@ -280,7 +316,7 @@ This folder contains data results files for the ProEnd Scripts project.
 ## Cite
 
 This code can be cited currently as BioRxiv preprint
-\[[1](#ref-salcedo2024proend)\]
+\[[2](#ref-salcedo2024proend)\]
 
 ## License
 
@@ -296,11 +332,35 @@ meaning you can use it but citing it’s source.
 
 <div id="refs" class="references csl-bib-body">
 
+<div id="ref-li2022cdc48" class="csl-entry">
+
+1\. Li J, Yuan J, Li Y, Sun H, Ma T, Huai J, et al. The CDC48 complex
+mediates ubiquitin-dependent degradation of intra-chloroplast proteins
+in plants. Cell Reports. 2022;39.
+
+</div>
+
 <div id="ref-salcedo2024proend" class="csl-entry">
 
-1\. Salcedo-Tacuma DM, Howells G, McHose C, Gutierrez-Diaz A, Smith DM.
+2\. Salcedo-Tacuma DM, Howells G, McHose C, Gutierrez-Diaz A, Smith DM.
 ProEnd: A comprehensive database for identifying HbYX motif-containing
 proteins across the tree of life. bioRxiv. 2024;2024–06.
+
+</div>
+
+<div id="ref-banchenko2019common" class="csl-entry">
+
+3\. Banchenko S, Arumughan A, Petrović S, Schwefel D, Wanker EE, Roske
+Y, et al. Common mode of remodeling AAA ATPases p97/CDC48 by their
+disassembling cofactors ASPL/PUX1. Structure. 2019;27:1830–41.
+
+</div>
+
+<div id="ref-abramson2024accurate" class="csl-entry">
+
+4\. Abramson J, Adler J, Dunger J, Evans R, Green T, Pritzel A, et al.
+Accurate structure prediction of biomolecular interactions with
+AlphaFold 3. Nature. 2024;1–3.
 
 </div>
 
