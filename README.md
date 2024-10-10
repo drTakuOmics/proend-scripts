@@ -199,10 +199,10 @@ head(Whole_table[grepl("CDC48",Whole_table$geneID),c(2,3,8)])
 
 #### 6. Reconstruction a potential interaction of CDC48 and the 20S proteasome.
 
-Due its potential we decided to further proceed and reconstruct in-silico a CDC48 complex.
-CDC48 posess a known AAA+ domain which indicates the formation of a homo-oligomer, commonly
-an hexamer is formed in the proteins with this domain. You can proceed and use alphafold V2 multimer
-or alphafold V3 which allows to use ligands such as ATP.
+Given its potential, we decided to proceed with an in-silico reconstruction of the CDC48 complex in this example. 
+CDC48 contains a well-characterized AAA+ domain, which is typically associated with the formation of a homo-oligomer, 
+most commonly a hexamer in proteins of this type. For this reconstruction, AlphaFold V2 Multimer or AlphaFold V3 can be used, 
+the latter allowing the inclusion of ligands such as ATP.
 
 <div style="text-align: center;">
 
