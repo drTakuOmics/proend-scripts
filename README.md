@@ -210,15 +210,35 @@ or alphafold V3 which allows to use ligands such as ATP.
 <img src="Arabidopsis_uniprot_proteome/CDC-48.png"
 style="width: 100%;height: auto">
 <figcaption style="margin-top: 10px;">
-<strong>CDC-48 Hexamer prediction with and without ATP.
+<strong>CDC-48 Hexamer prediction with and without ATP. HbYX motif in orange
 </strong>
 </figcaption>
 </figure>
 
-<a name="GO_terms_HbYX"></a>
+<a name="_HbYX"></a>
 
 </div>
+As expected, the CDC-48 homohexamer predictions show robust pTM values, with 0.61 in the absence of ATP and 0.55 in the presence of ATP. 
+A pTM score above 0.5 indicates that the predicted overall structure of the complex is likely to resemble the true native structure.
+Interestingly, the HbYX motif can be observed shifting from the outer structure to the inner portion, a conformational change commonly 
+seen in substrate-processing ATPases that interact with the 20S proteasome upon substrate engagement. 
+This change facilitates interaction with the 20S proteasome to open the gate for substrate entry.
 
+You can go ahead and perform  molecular docking with the 20S proeteasome by using ChimeraX or the tool you like.
+<div style="text-align: center;">
+
+<figure>
+<img src="Arabidopsis_uniprot_proteome/CDC48-20S.png"
+style="width: 100%;height: auto">
+<figcaption style="margin-top: 10px;">
+<strong>Potential CDC48-20S complex formation.HbYX motif in orange
+</strong>
+</figcaption>
+</figure>
+
+<a name="_HbYX"></a>
+
+</div>
 ## Requirements
 
 - Unix-like environment
