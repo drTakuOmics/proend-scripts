@@ -315,8 +315,7 @@ This folder contains data results files for the ProEnd Scripts project.
 
 ## Cite
 
-This code can be cited currently as BioRxiv preprint
-\[[2](#ref-salcedo2024proend)\]
+This code can now be cited as our BMC-Genomics article [@salcedo2024proend](https://rdcu.be/dW6ng)
 
 ## License
 
@@ -342,9 +341,9 @@ in plants. Cell Reports. 2022;39.
 
 <div id="ref-salcedo2024proend" class="csl-entry">
 
-2\. Salcedo-Tacuma DM, Howells G, McHose C, Gutierrez-Diaz A, Smith DM.
-ProEnd: A comprehensive database for identifying HbYX motif-containing
-proteins across the tree of life. bioRxiv. 2024;2024–06.
+2\. Salcedo-Tacuma, D., Howells, G.D., McHose, C. et al. ProEnd: a comprehensive database 
+for identifying HbYX motif-containing proteins across the tree of life. 
+BMC Genomics 25, 951 (2024). https://doi.org/10.1186/s12864-024-10864-4
 
 </div>
 
