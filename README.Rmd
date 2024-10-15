@@ -218,7 +218,7 @@ No installation is required. Simply clone this repository or download the script
 This folder contains data results files for the ProEnd Scripts project.
 
 ## Cite 
-This code now can be cited as our BMC-Genomics article [@salcedo2024proend](https://rdcu.be/dW6ng)
+This code now can be cited as our BMC-Genomics article [@ProEnd](https://rdcu.be/dW6ng)
 
 ## License 
 
