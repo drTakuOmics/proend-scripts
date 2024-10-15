@@ -246,7 +246,7 @@ proteasome to open the gate for substrate entry.
 
 #### 6. Computational reconstruction of the potential interaction between CDC48 and the 20S proteasome.
 
-As shown for the archaeal AAA ATPase “MJ1494”
+As shown for the archaeal AAA ATPase PAN-2 “MJ1494”
 \[[2](#ref-salcedo2024proend)\], we proceeded with a molecular docking
 of the CDC48 complex with the 20S proteasome using ChimeraX or any
 preferred molecular docking tool
@@ -315,7 +315,7 @@ This folder contains data results files for the ProEnd Scripts project.
 
 ## Cite
 
-This code can now be cited as our BMC-Genomics article [@salcedo2024proend](https://rdcu.be/dW6ng)
+This code can now be cited as our BMC-Genomics article [@ProEnd](https://rdcu.be/dW6ng)
 
 ## License
 
