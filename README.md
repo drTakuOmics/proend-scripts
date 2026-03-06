@@ -315,7 +315,7 @@ This folder contains data results files for the ProEnd Scripts project.
 
 ## Cite
 
-This code can now be cited as our BMC-Genomics article [@ProEnd](https://rdcu.be/dW6ng)
+This code can now be cited as our BMC-Genomics article [@ProEnd](https://link.springer.com/article/10.1186/s12864-024-10864-4)
 
 ## License
 
