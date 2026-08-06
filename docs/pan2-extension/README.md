@@ -17,15 +17,15 @@ The present extension connects that published activity result with two structura
 
 The biochemical activity described in the ProEnd study provides the experimental basis for this structural follow-up.
 
-![Published PAN2 activity from the ProEnd study](figures/PAN-2-Activity_proend.png)
+![Published PAN2 activity from the ProEnd study](figures/pan_2_activity.png)
 
-**Figure 1. Published PAN2 activity result from the ProEnd study.** This panel is reproduced here to connect the previously reported biochemical evidence with the TEM and AF3 observations presented below. The original publication remains the primary source for experimental design, statistics, and interpretation.
+**Figure 1. Published PAN2 activity result from the ProEnd study.** This panel connects the previously reported biochemical evidence with the TEM and AF3 observations presented below. The original publication remains the primary source for experimental design, statistics, and interpretation.
 
 ---
 
 ## 2. Negative-stain TEM and CryoSPARC workflow
 
-PAN2 was recombinantly expressed with a His tag. A Ni-NTA pulldown was performed in the presence of proteasome, and the recovered sample was mounted on carbon-film-coated copper grids. Grids were prepared by a standard negative-stain procedure using **1% uranyl acetate**.
+PAN2 was recombinantly expressed with a His tag. A Ni-NTA pulldown was performed in the presence of proteasome, and the recovered sample was mounted on carbon-film-coated copper grids. Grids were prepared using a standard negative-stain procedure with **1% uranyl acetate**.
 
 TEM images were acquired at **80 kV** using a **JEOL 1010 transmission electron microscope** equipped with an **AMT Hamamatsu ORCA-HR digital camera**. Eight micrographs were used for the exploratory CryoSPARC workflow.
 
@@ -39,7 +39,6 @@ TEM images were acquired at **80 kV** using a **JEOL 1010 transmission electron 
 |---|---|---:|
 | Import micrographs | Micrographs | 8 |
 | Acquisition | Accelerating voltage | 80 kV |
-| Acquisition | Exposure setting | 100 |
 | Acquisition | Magnification | 29,070x |
 | Acquisition | Image dimensions | 5056 × 5056 px |
 | Blob picker | Candidate particles | 21,534 |
@@ -52,8 +51,6 @@ TEM images were acquired at **80 kV** using a **JEOL 1010 transmission electron 
 | 2D classification | Number of classes | 100 |
 | 2D selection | Retained classes | 4 |
 | 2D selection | Retained particles | 42 |
-
-> The exposure value is reported here as recorded for this test dataset. Add the exact microscope/software unit before final release if available.
 
 ---
 
@@ -75,7 +72,7 @@ The selected classes provide particle-level observations compatible with PAN2 as
 
 A separate structural visualization shows the predicted PAN2 hexamer and the orientation of the HbYX-containing C-terminal tails.
 
-[Open the PAN2 hexamer prediction video](media/PAN2-Hexamer-Prediction.mp4)
+[▶ Open the PAN2 hexamer prediction video](figures/PAN2-Hexamer-Prediction.mp4)
 
 **Video 1. PAN2 hexamer prediction.** This is a rotation of a static structural prediction. It is included to show the overall assembly and the position of the C-terminal regions; it does not represent molecular dynamics or an experimentally observed conformational trajectory.
 
@@ -97,9 +94,9 @@ AlphaFold 3 was used to model six PAN2 chains from *M. jannaschii* together with
 
 The model therefore represents a **PAN2 hexamer-T20S alpha-ring complex**, not the complete four-ring 20S proteasome.
 
-[Open the PAN2-T20S AF3 video](media/PAN2-T20S-Video.mp4)
+[▶ Open the PAN2-T20S AF3 video](figures/PAN2-T20S-Video.mp4)
 
-**Video 2. Rotation of the static AF3 PAN2 hexamer-T20S alpha-ring prediction.** The PAN2 HbYX-containing tails are shown in orange. The animation is intended to display the overall predicted arrangement and does not represent ATP hydrolysis, molecular dynamics, or a time-resolved conformational transition.
+**Video 2. Rotation of the static AF3 PAN2 hexamer-T20S alpha-ring prediction.** The PAN2 HbYX-containing tails are shown in orange. The animation displays the overall predicted arrangement and does not represent ATP hydrolysis, molecular dynamics, or a time-resolved conformational transition.
 
 ---
 
@@ -128,30 +125,28 @@ Together, these observations extend the ProEnd PAN2 case study from sequence-bas
 
 ---
 
-## Files expected in this extension
-
-Upload the final assets to these exact paths on the branch `docs/pan2-tem-af3-update`:
+## Repository assets
 
 ```text
 docs/pan2-extension/
 ├── README.md
-├── figures/
-│   ├── PAN-2-Activity_proend.png
-│   ├── pan2-cryosparc-workflow.png
-│   ├── pan2-2d-classes.png
-│   └── pan2_t20s_af3.png
-└── media/
+└── figures/
+    ├── pan_2_activity.png
+    ├── pan2-cryosparc-workflow.png
+    ├── pan2-2d-classes.png
+    ├── pan2_t20s_af3.png
     ├── PAN2-Hexamer-Prediction.mp4
     └── PAN2-T20S-Video.mp4
 ```
 
+GitHub displays the PNG figures directly. The MP4 files are provided as linked videos because GitHub README rendering does not consistently embed video playback.
+
 ---
 
-## Final checks before linking from the main README
+## Final review before linking from the main README
 
-- [ ] Upload all six files using the exact names and paths above.
-- [ ] Confirm that the exposure value and its unit are represented correctly.
-- [ ] Confirm whether the published activity panel requires an additional attribution note.
-- [ ] Verify that both MP4 links open from GitHub.
-- [ ] Review all captions and terminology.
-- [ ] Add a short preview and link from the main README only after this page is approved.
+- [x] Upload the four PNG figures.
+- [x] Upload the two MP4 structural visualizations.
+- [x] Connect all figure and video paths in this page.
+- [ ] Review the captions and terminology.
+- [ ] Add a compact preview and link from the main README after approval.
