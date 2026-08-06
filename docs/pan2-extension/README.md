@@ -73,20 +73,30 @@ The particle population was heterogeneous. Most classes were excluded during cur
 The selected classes provide particle-level observations compatible with PAN2 association with the T20S proteasome. Because this was an eight-micrograph test dataset with a small retained subset, no three-dimensional reconstruction or atomic interface is claimed from the TEM analysis.
 
 ---
-
 ## 4. PAN2 hexamer prediction
 
 A separate structural visualization shows the predicted PAN2 hexamer and the orientation of the HbYX-containing C-terminal tails.
 
-[▶ Open the PAN2 hexamer prediction video](figures/PAN2-Hexamer-Prediction.mp4)
+<div align="center">
+  <a href="figures/PAN2-Hexamer-Prediction.mp4">
+    <img src="figures/PAN2-Hexamer-Prediction.gif"
+         alt="PAN2 hexamer prediction"
+         width="640">
+  </a>
+</div>
 
-**Video 1. PAN2 hexamer prediction.** This is a rotation of a static structural prediction. It is included to show the overall assembly and the position of the C-terminal regions; it does not represent molecular dynamics or an experimentally observed conformational trajectory.
-
+**Video 1. PAN2 hexamer prediction.** The GIF provides an inline preview of a rotating static structural prediction, while clicking the image opens the higher-quality MP4. This visualization is included to show the overall assembly and the position of the C-terminal regions; it does not represent molecular dynamics or an experimentally observed conformational trajectory.
 ---
 
-## 5. AlphaFold 3 PAN2 hexamer-T20S alpha-ring model
+<div align="center">
+  <a href="figures/PAN2-T20S-Video.mp4">
+    <img src="figures/PAN2-T20S-Video.gif"
+         alt="PAN2-T20S AlphaFold 3 model"
+         width="640">
+  </a>
+</div>
 
-AlphaFold 3 was used to model six PAN2 chains from *M. jannaschii* together with seven alpha subunits from the *T. acidophilum* 20S proteasome.
+**Video 2. Rotation of the static AF3 PAN2 hexamer-T20S alpha-ring prediction.** The PAN2 HbYX-containing tails are shown in orange. The GIF provides an inline preview, while clicking the image opens the higher-quality MP4. The animation displays the overall predicted arrangement and does not represent ATP hydrolysis, molecular dynamics, or a time-resolved conformational transition.
 
 ### Model composition
 
