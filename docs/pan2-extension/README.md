@@ -15,11 +15,17 @@ The present extension connects that published activity result with two structura
 
 ## 1. Published PAN2 activity
 
-The biochemical activity described in the ProEnd study provides the experimental basis for this structural follow-up.
-
-![Published PAN2 activity from the ProEnd study](figures/pan_2_activity.png)
-
-**Figure 1. Published PAN2 activity result from the ProEnd study.** This panel connects the previously reported biochemical evidence with the TEM and AF3 observations presented below. The original publication remains the primary source for experimental design, statistics, and interpretation.
+<table>
+<tr>
+<td width="36%" valign="top" align="center">
+<img src="figures/pan_2_activity.png" alt="Published PAN2 activity from the ProEnd study" width="320">
+</td>
+<td width="64%" valign="top">
+<p>The biochemical activity described in the ProEnd study provides the experimental basis for this structural follow-up.</p>
+<p><strong>Figure 1. Published PAN2 activity result from the ProEnd study.</strong> PAN2 increased T20S proteasome activity relative to T20S alone. This panel connects the previously reported biochemical evidence with the TEM and AF3 observations presented below. The original publication remains the primary source for experimental design, statistics, and interpretation.</p>
+</td>
+</tr>
+</table>
 
 ---
 
